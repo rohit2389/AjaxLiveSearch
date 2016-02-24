@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <script src="./jquery-2.2.0.min.js"></script>
+  <!--   <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap-theme.min.css"> -->
+    <!-- <script src="./bootstrap.min.js"></script> -->
+    <script src="typeahead.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $('input.typeahead').typeahead({
+        name: 'typeahead',
+        remote:'search.php?key=%QUERY',
+        limit : 10
+        });
+    });
+    </script>
+    <style type="text/css">
+body{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.bs-example{
+	font-family: sans-serif;
+	position: relative;
+	margin: 50px;
+}
+.tt-query {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.tt-hint {
+	color: #999999;
+}
+.tt-dropdown-menu {
+	border: 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	margin-top: 12px;
+	padding: 8px 0;
+	width: 100%;
+}
+.tt-suggestion {
+	line-height: 24px;
+	padding: 3px 20px;
+}
+.tt-suggestion.tt-is-under-cursor {
+	background-color: #0097CF;
+	color: #FFFFFF;
+}
+.tt-suggestion p {
+	margin: 0;
+}
+</style>
+  </head>
+  <body>
+  
+        <input type="text" name="typeahead" class="typeahead" autocomplete="off" spellcheck="false" placeholder="User Name">
+   
+  </body>
+</html>
